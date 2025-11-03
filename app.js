@@ -1,10 +1,14 @@
 const MOCK_WEATHER = {
-  "Stockholm": { tempC: 7, description: "Mulet", icon: "☁️", updated: "09:00" },
+  "Linköping": { tempC: 7, description: "Mulet", icon: "☁️", updated: "09:00" },
   "Göteborg": { tempC: 8, description: "Lätt regn", icon: "🌧️", updated: "09:00" },
   "Malmö": { tempC: 10, description: "Klart", icon: "☀️", updated: "09:00" },
-  "Uppsala": { tempC: 6, description: "Disigt", icon: "🌫️", updated: "09:00" },
-  "Lund": { tempC: 9, description: "Halvklart", icon: "⛅", updated: "09:00" },
-
+  "Sundsvall": { tempC: 6, description: "Disigt", icon: "🌫️", updated: "09:00" },
+  "Umeå": { tempC: 9, description: "Halvklart", icon: "⛅", updated: "09:00" },
+  "Linköping": { tempC: 14, description: "Halvklart", icon: "⛅", updated: "10:00" },
+  "Göteborg": { tempC: 15, description: "Klart", icon: "☀️", updated: "10:00" },
+  "Malmö": { tempC: 16, description: "Lätt regn", icon: "🌧️", updated: "10:00" },
+  "Sundsvall": { tempC: 10, description: "Mulet", icon: "☁️", updated: "10:00" },
+  "Umeå": { tempC: 12, description: "Disigt", icon: "🌫️", updated: "10:00" },
 };
 
 
@@ -22,7 +26,7 @@ searchBtn.addEventListener("click", () => {
  }
 
 
- 
+
  const data = MOCK_WEATHER[city];
  result.innerHTML = `
  <h2>${city}</h2>
