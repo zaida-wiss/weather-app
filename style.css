@@ -1,25 +1,37 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#weatherResult {
-
+body {
+  margin: 0;
+  font-family: "inter",sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#cce6ff, #4a90e2);
+  overflow: hidden;
 }
-.card hidden {
 
+.cloud {
+  position: absolute;
+  width: 100px; 
+  opacity: 0.7; 
+}
+
+.cloud1 {
+  top: 10%;
+  left: 15%;
+}
+
+.cloud2 {
+  top: 30%;
+  right: 20%;
+}
+
+.cloud3 {
+  bottom: 15%;
+  left: 25%;
+}
+
+.subtitle {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 300;
+    margin-top: 0.5rem;
 }
