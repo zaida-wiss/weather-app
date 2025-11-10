@@ -14,6 +14,16 @@ searchBtn.addEventListener("click", async () => {
     renderWeather(data);
 });
 
+cityInput.addEventListener("change", async () => {
+    const city = cityInput.value.trim();
+    if (!city) return;
+
+    const formattedCity = city[0].toUpperCase() + city.slice(1).toLowerCase();
+    currentCity = formattedCity;
+    const data = await getWeather(formattedCity);
+    renderWeather(data);
+});
+
 setInterval(async () => {
     if (currentCity) {
         const data = await getWeather(currentCity);
