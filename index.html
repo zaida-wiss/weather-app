@@ -1,30 +1,26 @@
+<!DOCTYPE html>
+<html lang="sv">
 <head>
-  <title>Väderapp</title>
-  <script src="app.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title aria-label="Väderstation">Väderstation</title>
+    <script type="module" src="api.js"></script>
 </head>
-
 <body>
-  <div class="container">
-      <h1>Väderapp</h1>
-      <div class="search-container">
-          <input id="cityInput" type="text" placeholder="Ange stad..." />
-          <button id="searchBtn">
+
+    <div class="container">
+    <h1>Väderapp</h1>
+    <section id="input-section">
+        <input id="input" type="text" aria-label="inmatningsfält för en stad" placeholder="Skriv stad här">
+        <button id="inputBtn" aria-label="sök-knapp">
               <img src="Bilder/cloud.svg" class="cloud cloud1" alt="Moln">
               <img src="Bilder/cloud.svg" class="cloud cloud2" alt="Moln">
               <img src="Bilder/cloud.svg" class="cloud cloud3" alt="Moln">
               <img src="Bilder/search (1).svg" alt="Sök" class="btn-icon" />
           </button>
       </div>
-  <div id="weatherResult" class="card hidden">
-      <h2 id="cityName"></h2>
-      <p id="temperature"></p>
-      <p id="description"></p>
-      <span id="icon"></span>
-      <p id="updatedTime"></p>
-  </div>
-  </div>
-  </body>
+    </section>
+        <section id="weatherInfo" aria-label="väderinformation"></section>
+</body>
 </html>
