@@ -1,12 +1,53 @@
 body {
   margin: auto;
-  font-family: "inter",sans-serif;
+  font-family: 'inter',sans-serif;
+  color: #ffffff;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(#cce6ff, #4a90e2);
+  background: linear-gradient(#d0e8ff, #3dc2ff);
   overflow: hidden;
+  text-align: center;
+  
+}
+
+
+.card {
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 20px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.46);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.hidden {
+  display: none;
+}
+
+.search-container {
+  display: flex;
+  gap: 5px; /* mellanrum mellan input och knapp */
+  margin-bottom: 10px;
+}
+
+input {
+  flex: 1; /* input tar upp allt utrymme */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px 0 0 8px; /* rundade hörn på vänster sida */
+  outline: none;
+}
+
+.btn-icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
 }
 
 .cloud {
@@ -30,8 +71,4 @@ body {
   left: 25%;
 }
 
-.subtitle {
-    color: rgba(0, 0, 0, 0.6);
-    font-weight: 300;
-    margin-top: 0.5rem;
-}
+
