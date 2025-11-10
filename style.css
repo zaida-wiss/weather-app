@@ -16,13 +16,16 @@ body {
 .card {
   border-radius: 8px;
   padding: 15px;
-  margin-top: 20px;
+  margin-top: 40px;
   text-align: center;
   background: rgba(255, 255, 255, 0.46);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
+  background: #64c9f8;
+  box-shadow:  23px 23px 46px #fffdfd,
+  -23px -23px 46px #ffffff;
 }
 
 .hidden {
