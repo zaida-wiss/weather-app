@@ -57,17 +57,17 @@ input {
 }
 
 .cloud1 {
-  top: 10%;
+  top: 5%;
   left: 15%;
 }
 
 .cloud2 {
-  top: 30%;
-  right: 20%;
+  top: 15%;
+  right: 15%;
 }
 
 .cloud3 {
-  bottom: 15%;
+  bottom: 10%;
   left: 25%;
 }
 
