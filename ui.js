@@ -5,15 +5,25 @@ export function renderWeather(weatherData) {
 
     console.log(weatherData);
   weatherInfo.innerHTML = `
-    <div class="card hidden">
-      <section aria-live="polite">
-        <h2>${weatherData.name}</h2>
-        <p>${weatherData.main.temp} °C</p>
-        <p>${weatherData.weather[0].description}</p>
-        <p>Uppdaterad: ${time}</p>
-      </section>
-    </div>
+  <div class="card">
+    <section aria-live="polite">
+      <h2>${weatherData.name}</h2>
+      <p>
+        <span class="sr-only">Temperatur:</span>
+        ${weatherData.main.temp}°C
+      </p>
+      <p>
+        <span class="sr-only">Beskrivning:</span>
+        ${weatherData.weather[0].description}
+      </p>
+      <p>
+        <span class="sr-only">Senast uppdaterad:</span>
+        Senast uppdaterad: ${time}
+      </p>
+    </section>
+  </div>
 `;
+
   // Ta bort "hidden"-klassen när data visas
   const card = weatherInfo.querySelector(".card");
   card.classList.remove("hidden");
