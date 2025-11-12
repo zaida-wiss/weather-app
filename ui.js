@@ -1,30 +1,53 @@
-export function renderWeather(weatherData) {
-    const weatherInfo = document.getElementById("weatherInfo");
+// 1️⃣ KLASS FÖR ATT SKAPA VÄDERKORT
+export class WeatherCard {
+  constructor(weatherData) {
+    this.weatherData = weatherData;
+  }
+
+  render() {
     const now = new Date();
-    const time = now.toLocaleTimeString("sv-SE", { hour: "2-digit", minute: "2-digit"});
+    const time = now.toLocaleTimeString("sv-SE", {
+      hour: "2-digit",
+      minute: "2-digit",
+    });
 
-    console.log(weatherData);
-  weatherInfo.innerHTML = `
-  <div class="card">
-    <section aria-live="polite">
-      <h2>${weatherData.name}</h2>
-      <p>
-        <span class="sr-only">Temperatur:</span>
-        ${weatherData.main.temp}°C
-      </p>
-      <p>
-        <span class="sr-only">Beskrivning:</span>
-        ${weatherData.weather[0].description}
-      </p>
-      <p>
-        <span class="sr-only">Senast uppdaterad:</span>
-        Senast uppdaterad: ${time}
-      </p>
-    </section>
-  </div>
-`;
+    const card = document.createElement("div");
+    card.classList.add("card");
 
-  // Ta bort "hidden"-klassen när data visas
-  const card = weatherInfo.querySelector(".card");
-  card.classList.remove("hidden");
+    card.innerHTML = `
+      <section aria-live="polite">
+        <h2>${this.weatherData.name}</h2>
+        <p>
+          <span class="sr-only">Temperatur:</span>
+          ${this.weatherData.main.temp}°C
+        </p>
+        <p>
+          <span class="sr-only">Beskrivning:</span>
+          ${this.weatherData.weather[0].description}
+        </p>
+        <p>
+          <span class="sr-only">Senast uppdaterad:</span>
+          Senast uppdaterad: ${time}
+        </p>
+      </section>
+    `;
+
+    return card;
+  }
+}
+
+// 2️⃣ FUNKTION FÖR ATT VISA KORT PÅ SIDAN
+export function renderWeather(weatherData) {
+  const weatherInfo = document.getElementById("weatherInfo");
+
+  // Kontrollera om samma stad redan finns — ta bort dubblett
+  const existingCard = weatherInfo.querySelector(`[data-city="${weatherData.name}"]`);
+  if (existingCard) existingCard.remove();
+
+  // Skapa nytt kort
+  const card = new WeatherCard(weatherData).render();
+  card.dataset.city = weatherData.name;
+
+  // Lägg till kortet under tidigare
+  weatherInfo.prepend(card);
 }

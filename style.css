@@ -2,12 +2,12 @@ body {
   margin: 0;
   font-family: 'inter',sans-serif;
   color: #ffffff;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background: linear-gradient(#d0e8ff, #3dc2ff);
-  overflow: hidden;
+  overflow: scroll;
   text-align: center;
   
 }
