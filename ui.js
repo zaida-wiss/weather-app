@@ -48,6 +48,5 @@ export function renderWeather(weatherData) {
   const card = new WeatherCard(weatherData).render();
   card.dataset.city = weatherData.name;
 
-  // Lägg till kortet under tidigare
   weatherInfo.prepend(card);
 }
