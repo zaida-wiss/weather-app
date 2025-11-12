@@ -36,7 +36,7 @@ export class WeatherCard {
   }
 }
 
-// 2️⃣ FUNKTION FÖR ATT VISA KORT PÅ SIDAN
+// Funktion för att visa kort på sidan
 export function renderWeather(weatherData) {
   const weatherInfo = document.getElementById("weatherInfo");
 
