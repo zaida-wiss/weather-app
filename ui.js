@@ -16,21 +16,24 @@ export class WeatherCard {
 
     card.innerHTML = `
       <section aria-live="polite">
-        <h2>${this.weatherData.name}</h2>
-        <p>
-          <span class="sr-only">Temperatur:</span>
-          ${this.weatherData.main.temp}°C
-        </p>
-        <p>
-          <span class="sr-only">Beskrivning:</span>
-          ${this.weatherData.weather[0].description}
-        </p>
-        <p>
-          <span class="sr-only">Senast uppdaterad:</span>
-          Senast uppdaterad: ${time}
-        </p>
-      </section>
-    `;
+      <h2 tabindex="0">${this.weatherData.name}</h2>
+
+      <p tabindex="0">
+        <span class="sr-only">Temperatur:</span>
+        ${this.weatherData.main.temp}°C
+      </p>
+
+      <p tabindex="0">
+        <span class="sr-only">Beskrivning:</span>
+        ${this.weatherData.weather[0].description}
+      </p>
+
+      <p tabindex="0">
+        <span class="sr-only">Senast uppdaterad:</span>
+        Senast uppdaterad: ${time}
+      </p>
+    </section>
+  `;
 
     return card;
   }
