@@ -1,36 +1,26 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VäderApp</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title aria-label="Väderstation">Väderstation</title>
+    <script type="module" src="api.js"></script>
 </head>
 <body>
-  <div class="container">
-    <h1>VäderApp</h1>
-    <p class="subtitle">Sök efter en stad för att se aktuellt väder</p>
 
-    <img src="Bilder/cloud.svg" class="cloud cloud1" alt="Moln">
-    <img src="Bilder/cloud.svg" class="cloud cloud2" alt="Moln">
-    <img src="Bilder/cloud.svg" class="cloud cloud3" alt="Moln">
-
-    <div class="search">
-      <input id="cityInput" type="text" placeholder="Ange stad (t.ex. Umeå)" />
-      <button id="searchBtn">
-        <img src="Bilder/search (1).svg" alt="Sök" width="20" height="20">
-      </button>
-    </div>
-
-    <div id="weatherResult" class="card hidden">
-      <h2 id="cityName"></h2>
-      <p id="temperature"></p>
-      <p id="description"></p>
-      <span id="icon"></span>
-      <p id="updatedTime"></p>
-    </div>
-    <script src="app.js"></script>
+    <div class="container">
+    <h1>Väderapp</h1>
+    <div class="search-container">
+    <label class="sr-only" for="input">Skriv stad här</label>
+    <input id="input" type="text" placeholder="Skriv stad här" aria-label="Skriv stad här">
+    <button id="inputBtn" aria-label="Sök-knapp">
+              <img src="Bilder/cloud.svg" class="cloud cloud1" alt="Moln">
+              <img src="Bilder/cloud.svg" class="cloud cloud2" alt="Moln">
+              <img src="Bilder/cloud.svg" class="cloud cloud3" alt="Moln">
+              <img src="Bilder/search (1).svg" alt="Sök" class="btn-icon" />
+          </button>
+      </div>
+      <section id="weatherInfo" aria-live="polite" aria-atomic="true" aria-label="Väderinformation" tabindex="0"></section>
 </body>
 </html>
-
