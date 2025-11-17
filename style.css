@@ -32,35 +32,11 @@ body {
   display: none;
 }
 
-.search-container { 
-  display: flex; 
+.search-container {
+  display: flex;
   gap: 5px; /* mellanrum mellan input och knapp */
-   margin-bottom: 10px; }
-
-
-/*.suggestions {
-  list-style: none;
-  padding: 6;
-  margin: 40px;
-  background: white;
-  color: black;
-  max-height: auto;
-  overflow-y: auto;
-  position: absolute;
-  width: auto;
-  border: 1px solid #ccc;
-  z-index: 10;
+  margin-bottom: 10px;
 }
-
-.suggestions li {
-  padding: 5px 10px;
-  cursor: pointer;
-}
-
-.suggestions li:hover,
-.suggestions li:focus {
-  background: #ddd;
-}*/
 
 input {
   flex: 1; /* input tar upp allt utrymme */
@@ -109,6 +85,7 @@ input {
   white-space: nowrap;
   border: 0;
 }
+
 
 
 
