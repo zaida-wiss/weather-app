@@ -5,14 +5,18 @@ const cityInput = document.getElementById("input");
 const searchBtn = document.getElementById("inputBtn");
 let currentCity = "";
 
+
 searchBtn.addEventListener("click", async () => {
     const city = cityInput.value.trim();
-    const formattedCity = city[0].toUpperCase()+city.slice(1).toLowerCase();
+    if (!city) return;
+
+    const formattedCity = city[0].toUpperCase() + city.slice(1).toLowerCase();
     currentCity = formattedCity;
-    console.log("Söker efter: ", formattedCity);
+
     const data = await getWeather(formattedCity);
     renderWeather(data);
 });
+
 
 cityInput.addEventListener("change", async () => {
     const city = cityInput.value.trim();
