@@ -32,11 +32,10 @@ body {
   display: none;
 }
 
-.search-container {
-  display: flex;
+.search-container { 
+  display: flex; 
   gap: 5px; /* mellanrum mellan input och knapp */
-  margin-bottom: 10px;
-}
+   margin-bottom: 10px; }
 
 
 /*.suggestions {
