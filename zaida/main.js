@@ -1,5 +1,5 @@
-import {getWeather} from "./data.js";
-import {renderWeather} from "./ui.js";
+import {getWeather} from "../js/services/data.js";
+import {renderWeather} from "../js/components/ui.js";
 
 const cityInput = document.getElementById("input");
 const searchBtn = document.getElementById("inputBtn");
