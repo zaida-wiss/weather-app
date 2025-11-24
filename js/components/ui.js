@@ -36,17 +36,3 @@ export class WeatherCard {
   }
 }
 
-// Funktion för att visa kort på sidan
-export function renderWeather(weatherData) {
-  const weatherInfo = document.getElementById("weatherInfo");
-
-  // Kontrollera om samma stad redan finns — ta bort dubblett
-  const existingCard = weatherInfo.querySelector(`[data-city="${weatherData.name}"]`);
-  if (existingCard) existingCard.remove();
-
-  // Skapa nytt kort
-  const card = new WeatherCard(weatherData).render();
-  card.dataset.city = weatherData.name;
-
-  weatherInfo.prepend(card);
-}
